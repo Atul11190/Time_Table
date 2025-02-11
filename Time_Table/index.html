@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table Creator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <img src="./IMAGES/UPES_LOGO.png" alt="Logo" class="logo">
+        <h2>Create Your Time Table</h2>
+        <table id="timetable">
+            <tr>
+                <th>Day</th>
+                <th>Subject</th>
+                <th>Time</th>
+                <th>Room No</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        <br>
+        <select id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <input type="text" id="subject" placeholder="Enter Subject">
+        <input type="time" id="time">
+        <input type="text" id="room" placeholder="Enter Room No">
+        <button class="btn add-btn" onclick="addRow()">Add Entry</button>
+        <button class="btn print-btn" onclick="printTable()">Print</button>
+        <button class="btn pdf-btn" onclick="downloadPDF()">Download PDF</button>
+        <button class="btn excel-btn" onclick="downloadExcel()">Download Excel</button>
+    </div>
+</body>
+</html>
