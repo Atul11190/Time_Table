@@ -1,0 +1,128 @@
+/* styles.css */
+:root {
+    --primary-color: #007BFF;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --background-image: url('background.jpg'); /* Main background image */
+    --table-background-image: url('pattern.png'); /* Pattern for the table */
+    --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    --border-radius: 10px;
+    --padding: 20px;
+    --margin: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-attachment: fixed; /* Ensures the background image stays fixed while scrolling */
+    text-align: center;
+    margin: var(--margin);
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--margin);
+    background-image: var(--table-background-image); /* Pattern for the table */
+    background-size: 20px 20px; /* Adjust the size of the pattern */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for the table */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for cells */
+}
+
+th {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.add-btn { 
+    background: var(--success-color); 
+    color: white; 
+}
+
+.print-btn { 
+    background: var(--info-color); 
+    color: white; 
+}
+
+.pdf-btn { 
+    background: var(--warning-color); 
+    color: white; 
+}
+
+.excel-btn { 
+    background: var(--warning-color); 
+    color: white; 
+}
+
+.delete-btn { 
+    background: var(--danger-color); 
+    color: white; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
